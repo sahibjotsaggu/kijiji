@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register | Kijiji</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="signin.php">Sign In</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </header>
+        <h1 id="title">Kijiji - Register</h1>
+        <!--<div class="g-recaptcha" data-sitekey="6Ld0AgETAAAAAMt-lY3a6Nlo8gzOMvyWKHcF5_99"></div>-->
+        <form action="register.php" method="post">
+            <table border="0">
+                <tr><td>Email:</td><td><input type="email" name="reg_email" /></td></tr>
+                <tr><td>Password:</td><td><input type="password" name="reg_pass" /></td></tr>
+                <tr><td colspan="2"><input type="submit" value="Sign In"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
