@@ -40,6 +40,7 @@
                         echo "<div id=post_desc>" . $p['post_desc'] . "</div>\n";
                         echo "<div id=post_price>$" . $p['post_price'] . "</div>\n";
                         echo "<div class='button" . $p['id'] . "' id='reply_button'>Send Message</div></div>\n";
+                        echo "<input type='hidden' id='hidd_for_" . $p['id'] . "' value='" . $p['email'] . "'>";
                     }
                 }
                 else {
@@ -47,16 +48,20 @@
                 }
                 ?>
         </div> <!-- end listings div -->
+        <div id="dark_page"></div>
         <div id="send_message">
+            <div id="mess_head">
+                <h2>Send a Message</h2>
+            </div>
             <form action="send_message.php" method="post">
-                <table border="0">
+                <table border="0" id="mess_tab">
                     <?php
                         echo "<tr><td>Email:</td><td>";
                         if (isset($_COOKIE['user_email'])) {
                             echo $_COOKIE['user_email'] . "</td></tr>";
                             echo "<tr><td>Message:</td><td><textarea name='mess_txt' id='mess_txt'></textarea></td></tr>";
                             echo "<tr><td colspan='2'><div class='g-recaptcha' data-sitekey='6Ld0AgETAAAAAMt-lY3a6Nlo8gzOMvyWKHcF5_99'></div>";
-                            echo "<tr><td colspan='2'><input type='submit' value='Send Message' /></td></tr>";
+                            echo "<tr><td colspan='2'><input type='submit' value='Send Message' id='mess_sub' /></td></tr>";
                         }
                         else {
                             echo "<a href='signin.php?redirect=books'>Sign In First</a></td></tr>";

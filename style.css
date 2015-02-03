@@ -120,5 +120,72 @@ h1 {
 }
 
 #send_message {
-    display: none;
+    position: fixed;
+    top: calc(50% - 160px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 320px;
+    background: #FFF;
+    /*display: none;*/
+    z-index: 2001;
+}
+
+#send_message #mess_head {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background: #9DC45F;
+    border-bottom: 1px solid #8aa52;
+}
+
+#send_message #mess_head h2 {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100px;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}
+
+#send_message #mess_tab {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    padding: 20px;
+}
+
+#send_message #mess_tab textarea {
+    width: 90%;
+}
+
+#send_message #mess_tab .g-recaptcha {
+    position: relative;
+    left: 75px;
+}
+
+#send_message #mess_tab #mess_sub {
+    position: relative;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 40px;
+    background: #222;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #CCC;
+}
+
+#dark_page {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(33,33,33,0.5);
+	z-index: 2000;
+	display: none;
 }

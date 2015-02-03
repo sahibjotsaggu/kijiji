@@ -53,7 +53,7 @@
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            mysql_query("INSERT INTO books_posts (image, post_title, post_desc, post_price, uni) VALUES('$fname', '$ptitle', '$pdesc', ' $pprice', '$u')") or die(mysql_error());
+            mysql_query("INSERT INTO books_posts (image, email, post_title, post_desc, post_price, uni) VALUES('$fname', '$_COOKIE[user_email]', '$ptitle', '$pdesc', ' $pprice', '$u')") or die(mysql_error());
             mkdir("posts/" . $u);
             /*$new_filename = "posts/" . $u . "/index.php";
             $myfile = fopen($new_filename, "w");
